@@ -17,7 +17,7 @@ def arrange_negative_numbers(arr):
     end = len(arr) - 1
 
     while start < end:
-        if arr[start] > 0:
+        if arr[start] >= 0:
             
             # swap elements
             arr[start], arr[end] = arr[end], arr[start]
@@ -32,5 +32,5 @@ def arrange_negative_numbers(arr):
     return arr
 
 
-arr = [1, -4, -2, 5, 3]
+arr = [-23, 48, -13, 31, -12, 6, -42, 23, 14, 33, -33, -21, 0, 25, -39, -31 ]
 arrange_negative_numbers(arr)
