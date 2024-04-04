@@ -13,16 +13,29 @@
 # So, the output will be 148.
 
 def maximumProfit(arr):
+    # assume the first value as minimum price
     min_price = arr[0]
+
+    # assume maximum profit as 0
     max_profit = 0
 
     for i in range(1, len(arr)):
+
+        # check current price is less than the minimum price
         if arr[i] < min_price:
+
+            # current price be the minimum price
             min_price = arr[i]
         
         else:
+
+            # find the profit
             profit = arr[i] - min_price
+
+            # check profit greater than maximum profit
             if max_profit < profit:
+
+                # profit be the maximum profit
                 max_profit = profit
 
     return max_profit

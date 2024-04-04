@@ -6,29 +6,43 @@
 # ' Single Scan' refers to iterating over the array/list just once or to put it in other words, 
 # you will be visiting each element in the array/list just once.
 
-arr = [0, 1, 2, 1, 2, 1, 2]
-new_arr = [0, 0, 0, 0, 0, 0, 0]
+def sorting012(arr):
 
-zero_index = 0
-one_index = 1
-two_index = 2
+    # initialize the position of zero as 0
+    zero = 0
 
-for i in arr:
-    if i == 0:
-        new_arr.insert(zero_index, i)
-        zero_index += 1
-        one_index += 1
-        two_index += 1
-    
-    elif i == 1:
-        new_arr.insert(one_index, i)
-        one_index += 1
-        two_index += 1
+    # initialize the current position
+    current = 0
 
-    elif i == 2:
-        new_arr.insert(two_index, i)
-        two_index += 1
+    # initialize the position of 2 as len(arr)-1 [last index]
+    two = len(arr)-1
 
-    print(new_arr)
-    
-print(new_arr)    
+    while current <= two:
+        if arr[current] == 0:
+
+            # swap the elements
+            arr[zero], arr[current] = arr[current], arr[zero]
+
+            # increment the zero position
+            zero += 1
+
+            # increment the current position
+            current += 1
+
+        elif arr[current] == 1:
+
+            # increment the current position
+            current += 1
+
+        elif arr[current] == 2:
+
+            # swap the elements
+            arr[two], arr[current] = arr[current], arr[two]
+
+            # decrement the two position
+            two -= 1
+        
+    return arr
+
+arr = [0, 1, 1, 0, 0, 1, 1, 0, 1, 0]
+sorting012(arr)
