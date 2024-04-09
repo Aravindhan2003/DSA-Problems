@@ -8,15 +8,12 @@ def findMinMaxSum(arr):
     
     # find minimum element
     min_ele = arr[0]
+    max_ele = arr[0]
     for i in range(len(arr)):
         if arr[i] < min_ele:
             min_ele = arr[i]
-
-    # find maximum element
-    max_ele = arr[0]
-    for i in range(len(arr)):
         if arr[i] > max_ele:
-            max_ele = arr[i]
+            max_ele = arr[i]  
 
     return (min_ele + max_ele)
 
