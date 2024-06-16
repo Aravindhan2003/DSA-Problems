@@ -28,7 +28,8 @@ def findPosition(nums, target):
                 else:
                     return [mid, end]
 
-nums = [1]
+nums = [1, 1, 1]
 target = 1
 print(findPosition(nums, target))
 
+# incomplete

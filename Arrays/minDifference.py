@@ -39,3 +39,5 @@ def min_difference(A, K):
 
 print(min_difference(A,K))
 # print(min_ele)
+
+# incomplete
